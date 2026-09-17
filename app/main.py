@@ -88,5 +88,5 @@ def excluir_livro(
     sessao_banco.delete(livro)
     sessao_banco.commit()
 
-    return {"mensagem": "Livro excluído com sucesso"}
+    return {"mensagem": "Livro excluído com sucesso!"}
 
