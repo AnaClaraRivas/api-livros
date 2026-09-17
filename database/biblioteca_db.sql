@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/09/2026 às 22:23
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Tempo de geração: 17-Set-2026 às 14:21
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,45 +26,46 @@ USE `biblioteca_db`;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `livros`
+-- Estrutura da tabela `livros`
 --
 
 CREATE TABLE `livros` (
   `id` int(11) NOT NULL,
-  `titulo` varchar(150) NOT NULL,
-  `autor` varchar(120) NOT NULL,
+  `titulo` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `autor` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ano_publicacao` int(11) NOT NULL,
   `disponivel` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Despejando dados para a tabela `livros`
+-- Extraindo dados da tabela `livros`
 --
 
 INSERT INTO `livros` (`id`, `titulo`, `autor`, `ano_publicacao`, `disponivel`) VALUES
 (1, 'O Amor Não é Obvio', 'Elayne Baeta', 2019, 1),
-(2, 'O Hobbit', 'J. R. R. Tolkien', 1937, 1);
+(2, 'O Hobbit', 'J. R. R. Tolkien', 1937, 1),
+(4, 'Vidas Secas', 'Graciliano Ramos', 1938, 1);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `livros`
+-- Índices para tabela `livros`
 --
 ALTER TABLE `livros`
   ADD PRIMARY KEY (`id`),
   ADD KEY `ix_livros_id` (`id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
