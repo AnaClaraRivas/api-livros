@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Set-2026 às 14:21
+-- Tempo de geração: 24-Set-2026 às 13:11
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -43,8 +43,10 @@ CREATE TABLE `livros` (
 
 INSERT INTO `livros` (`id`, `titulo`, `autor`, `ano_publicacao`, `disponivel`) VALUES
 (1, 'O Amor Não é Obvio', 'Elayne Baeta', 2019, 1),
-(2, 'O Hobbit', 'J. R. R. Tolkien', 1937, 1),
-(4, 'Vidas Secas', 'Graciliano Ramos', 1938, 1);
+(2, 'O Hobbit', 'J. R. R. Tolkien', 1937, 0),
+(4, 'Vidas Secas', 'Graciliano Ramoss', 1938, 1),
+(7, 'Memórias Póstumas de Brás Cubas', 'Machado de Assis', 1881, 1),
+(8, 'Querido Evan Hansen', 'Val EmmichVal Emmich', 2019, 1);
 
 --
 -- Índices para tabelas despejadas
@@ -65,7 +67,7 @@ ALTER TABLE `livros`
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
